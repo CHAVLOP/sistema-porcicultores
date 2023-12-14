@@ -1,0 +1,39 @@
+/* Estilo para ocultar elementos en la impresión */
+@media print {
+    .no-imprimir {
+        display: none !important;
+    }
+
+    /* Estilo para el encabezado en la hoja de impresión */
+    .encabezado {
+        text-align: center;
+        padding: 10px;
+        background-color: #f0f0f0;
+    }
+
+    /* Estilo para la tabla de impresión */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f0f0f0;
+    }
+
+    /* Ocultar las columnas "Editar" y "Eliminar" en la impresión */
+    th:nth-child(8),
+    th:nth-child(9),
+    td:nth-child(8),
+    td:nth-child(9) {
+        display: none;
+    }
+}
+
+/* Estilo para resaltar filas en rojo si se supera el límite de crédito */
+.text-danger {
+    background-color: #ffe6e6;
+}

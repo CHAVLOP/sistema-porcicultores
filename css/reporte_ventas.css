@@ -1,0 +1,31 @@
+@media screen {
+    /* Estilos para la vista normal (página web) */
+    .print-header {
+        display: none; /* Ocultar el encabezado de impresión en la vista normal */
+    }
+}
+@media print {
+    /* Estilos para la vista de impresión */
+    body * {
+        visibility: hidden;
+    }
+    .printable-content * {
+        visibility: visible;
+    }
+    .print-header {
+        text-align: center;
+        padding: 20px;
+        display: block; /* Mostrar el encabezado de impresión en la vista de impresión */
+    }
+    .print-header img {
+        max-width: 200px;
+        margin-bottom: 10px;
+        position: absolute; /* Posición absoluta para que el logotipo no afecte el diseño normal */
+        top: 0;
+        left: 0;
+    }
+    /* Agregar margen superior para mover la tabla más arriba en la hoja de impresión */
+    table.printable-table {
+        margin-top: 20px;
+    }
+}

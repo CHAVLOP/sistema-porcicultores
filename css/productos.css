@@ -1,0 +1,31 @@
+  /* Estilos para ocultar el botón de impresión en la hoja de impresión */
+  @media print {
+    .no-imprimir {
+        display: none !important;
+    }
+}
+
+/* Estilos para el encabezado en la hoja de impresión */
+@media print {
+    .encabezado {
+        text-align: center;
+        padding: 10px;
+        background-color: #f0f0f0;
+    }
+}
+
+/* Estilo para resaltar en rojo cuando la existencia es igual a cero */
+.existencia-cero td {
+    color: red;
+    font-weight: bold;
+}
+
+/* Estilos para centrar la tabla horizontalmente en la hoja de impresión */
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+table.center-table {
+    margin: 0 auto;
+}
